@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pen Shop</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img class="product" src="./img/inkpen.jpg" alt="...">
+            <h2>Ink Pen</h2>
+        </div>
+        <div class="price">
+            Rs-850
+        </div>
+        <button class="buy-button" id="buy-button" onclick="addToCart()">Buy Now</button>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart() {
+            let item = {
+                name: "Ink Pen",
+                price: 850,
+                quantity: 1,
+            };
+            cart.push(item);
+            window.confirm("You want to place an order?");
+            viewCart();
+        }
+
+        function viewCart() {
+            let cartItems = "";
+            for (let item of cart) {
+                cartItems += `${item.name} - Rs-${item.price}<br>`;
+            }
+
+            const cartPage = `
+                <h1>Shopping Cart</h1>
+                <div>${cartItems}</div>
+            `;
+            document.body.innerHTML = cartPage;
+        }
+
+        
+    </script>
+</body>
+</html>

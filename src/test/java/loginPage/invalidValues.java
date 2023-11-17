@@ -11,7 +11,13 @@ public class invalidValues
 		public static void main(String[] args) throws InterruptedException 
 		{
 			WebDriver driver= new FirefoxDriver();
-			driver.get("file:///D:/test/index.html");
+			// Get the current directory where the Java program is running
+			String projectPath = System.getProperty("user.dir");
+			
+			// Specify the relative path to your HTML file
+			String htmlFilePath = projectPath + "/frontend/index.html";
+			
+			driver.get("file:///" + htmlFilePath);
 			//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//*[@id=\"username\"]"))
 			.sendKeys("saurabh");

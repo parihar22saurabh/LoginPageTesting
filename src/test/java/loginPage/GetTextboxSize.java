@@ -10,7 +10,13 @@ public class GetTextboxSize {
 	public static void main(String[] args) 
 	{
 		WebDriver driver= new FirefoxDriver();
-		driver.get("file:///D:/test/index.html");
+		// Get the current directory where the Java program is running
+		String projectPath = System.getProperty("user.dir");
+		
+		// Specify the relative path to your HTML file
+		String htmlFilePath = projectPath + "/frontend/index.html";
+		
+		driver.get("file:///" + htmlFilePath);
 		WebElement EmailTextBox = driver.findElement(By.xpath("//*[@id=\"username\"]"));
 		int height = EmailTextBox.getSize().getHeight();
 		int width = EmailTextBox.getSize().getWidth();
