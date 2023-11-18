@@ -13,10 +13,10 @@ public class invalidValues
 			WebDriver driver= new FirefoxDriver();
 			// Get the current directory where the Java program is running
 			String projectPath = System.getProperty("user.dir");
-			
+			System.out.println(projectPath);
 			// Specify the relative path to your HTML file
 			String htmlFilePath = projectPath + "/frontend/index.html";
-			
+			System.out.println(htmlFilePath);
 			driver.get("file:///" + htmlFilePath);
 			//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//*[@id=\"username\"]"))

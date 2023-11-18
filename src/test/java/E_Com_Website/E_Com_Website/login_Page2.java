@@ -12,7 +12,11 @@ public class login_Page2 {
 	public static void main(String[] args) throws InterruptedException 
 	{
 		WebDriver driver= new FirefoxDriver();
-		driver.get("D:/learning/login.html");
+		
+		String projectPath = System.getProperty("user.dir");
+		String htmlFile = projectPath + "/learning_bootstrap/login.html";
+		//driver.get("D:/learning/login.html");
+		driver.get("file:///" + htmlFile ) ;
 		driver.findElement(By.id("enterLoginEmail")).sendKeys("sp@gmail.com");
 		driver.findElement(By.name("loginPassword")).sendKeys("pasword@123");
 		driver.manage().window().maximize();

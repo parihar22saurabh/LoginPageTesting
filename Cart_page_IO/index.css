@@ -1,0 +1,66 @@
+ .container1
+        {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .container2
+        {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .container3
+        {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .container4
+        {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .container5
+        {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        
+
+        .product 
+        {
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .price 
+        {
+            font-size: 18px;
+            color: black;
+        }
+
+        .buy-button
+        {
+            background-color: blueviolet;
+            color: black;
+            padding: 10px 20px;
+            border: black 2px;
+            cursor: pointer;
+           
+        }
+    
